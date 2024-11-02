@@ -1,10 +1,22 @@
 <h2>Menu</h2>
 
-testasdfsdf
+<button class='btn btn-primary' routerLink=''>Home</button>
 
-<button class = 'btn btn-primary' routerLink = ''>Home</button>
-<button class = 'btn btn-primary' routerLink = 'route1'>Go to route1</button>
-<button class = 'btn btn-primary' routerLink = 'modalexample1'>Modal example 1</button>
-<button class = 'btn btn-primary' routerLink = 'callModal1'>Call page with modal1</button>
+<div ngbDropdown class="d-inline-block">
+    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        Toggle dropdown
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class='p-2 border-dark'>
+        <button ngbDropdownItem class='bb'>Action - 1</button>
+        <button ngbDropdownItem class='bb'>Another Action</button>
+        <button ngbDropdownItem class='bb'>Something else is here</button>
+    </div>
+</div>
 
-<hr>
+
+
+    <button class='btn btn-primary' routerLink='route1'>Go to route1</button>
+    <button class='btn btn-primary' routerLink='modalexample1'>Modal example 1</button>
+    <button class='btn btn-primary' routerLink='callModal1'>Call page with modal1</button>
+
+    <hr>
