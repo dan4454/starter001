@@ -1,0 +1,13 @@
+<p>call-modal1 works!</p>
+
+<button (click) = "showModal = ! showModal" class = 'btn btn-primary'>Call the modal component</button>
+
+{{returnFromModel | json}}
+
+@if (showModal) {
+    @defer(){
+        <app-modal-example1 [(showModal)] = 'showModal'
+        [(returnFromModel)] = 'returnFromModel'
+        ></app-modal-example1>
+    }
+}
