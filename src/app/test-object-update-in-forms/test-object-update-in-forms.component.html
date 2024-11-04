@@ -1,0 +1,30 @@
+<p>test-object-update-in-forms works!</p>
+<br><br>
+
+<div class='infoBox' ng-non-bindable>
+    Notice that this assigns a value to the property of an object and it apparently works the way you expect it to work.
+    <br><br>
+    Also, if the values of a signal are assigned to an object, updating that object will act the same as updating the
+    signal using the signal methods. That is, myObj = mySignal() works to tie the two together.
+
+    <br><br>
+    There does appear to be a quirk. You can't use the model.set(... &lbrace;otherObject&rbrace;) in the template code directly. You
+    have to call a method in the component
+    code.
+</div>
+
+model value: {{nameObject() | json}}
+<br>
+inp: {{inp | json}}
+
+<br><br>
+From model():
+<input type='text' [(ngModel)]="nameObject().name">
+
+<br><br>
+From object:
+<input type='text' [(ngModel)]="inp.name">
+
+<br><br>
+
+<button class='btn btn-primary' (click)="setInpToModel()">Copy from inp to model</button>

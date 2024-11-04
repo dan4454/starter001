@@ -1,0 +1,31 @@
+<p>html-dialog works!</p>
+
+<hr>
+
+@if (!openDialog) {
+
+    <button class = 'btn btn-primary' (click) = "openDialog = true; name2 = name">Show the dialog</button>
+    <br><br>
+    Current name: {{name}}
+    
+}
+
+@if (openDialog) {
+
+    <dialog open>
+        Hello! this is a dialog (or modal if you want to call it that) that you can use
+        in your code
+        <br><br>
+        <input [(ngModel)] = 'name2'>
+        <br>
+        <br>
+        <button class = 'btn btn-primary' (click) = "changeName(); openDialog = false">Change name</button>
+        <button class = 'btn btn-primary' (click) = "openDialog = false">Cancel</button>
+    </dialog>
+}
+
+<div style = 'margin:10px; width: 400px; right:40px'>
+    <dialog open >
+        hello 2
+    </dialog>
+</div>
